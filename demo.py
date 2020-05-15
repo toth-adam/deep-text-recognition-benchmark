@@ -38,7 +38,7 @@ def demo(opt):
     demo_loader = torch.utils.data.DataLoader(
         demo_data, batch_size=opt.batch_size,
         shuffle=False,
-        num_workers=int(opt.workers),
+        num_workers=0,
         collate_fn=AlignCollate_demo, pin_memory=True)
 
     # predict
